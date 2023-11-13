@@ -1,9 +1,9 @@
 package Unidad1;
 import java.lang.Math;
+import java.util.Scanner;
 public class Unidad1 {
     public static void main(String[] args) {
-        ejercicio1();
-        ejercicio2();
+        ejercicio6();
 }
 public static void ejercicio1(){
     //Calcula el valor de las variables tras ejecutar cada instrucción.
@@ -62,10 +62,11 @@ public static void ejercicio2(){
 
 public static void ejercicio5(){
     //Evalúa las siguientes expresiones.
+    System.out.println("Principio de Ejercicio 5.");
     System.out.println("#1 = " + 24 % 5);
     System.out.println("#2 = " + 7/2 + 2.5);
     System.out.println("#3 = " + 10.8/2 + 2);
-    System.out.println("#4 = " + (4 + 6) * 3 + 2 * (5 - 1));
+    System.out.println("#4 = " + (4 + 6)*3 + 2*(5 - 1));
     System.out.println("#5 = " + 5/2 + 17 % 3);
     System.out.println("#6 = " + ((7 >= 5) || (27 != 8)));
     System.out.println("#7 = " + ((45 <= 7) || !(5 >= 7)));
@@ -77,9 +78,17 @@ public static void ejercicio5(){
     System.out.println("#13 = " + (((10+4)<(15-3))||((2*5+1)>(14-2*2))));
     System.out.println("#14 = " + ((4*2 <= 8) || (2*2 < 5) && (4 > 3 + 1)));
     System.out.println("#15 = " + ((10<=2*5)&&(3<4)|| !(8>7) && (3*2 <= 4*2-1)));
+    System.out.println("Final de Ejercicio 5.");
 }
 
 public static void ejercicio6(){
     //Pasa el diagrama a código.
+    System.out.println("Principio de Ejercicio 6.");
+    Scanner s = new Scanner(System.in);
+    System.out.println("Introduzca el radio del círculo: ");
+    double R = s.nextInt();
+    double area = 3.14 * R * R;
+    System.out.println("Área del círculo: " + area);
+    System.out.println("Final de Ejercicio 6.");
 }
 }
