@@ -4,7 +4,7 @@ public class Unidad1 {
         ejercicio1();
 }
 public static void ejercicio1(){
-    int A = 5, B = 2, C = 5;
+    int A = 5, B = 2, C = 3;
     System.out.println(A = B);
     System.out.println(C = A);
     System.out.println(B = (A + B + C) / 2);
