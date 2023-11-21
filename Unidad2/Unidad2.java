@@ -4,7 +4,7 @@ import java.lang.Math;
 
 public class Unidad2 {
     public static void main(String[] args) {
-        ejercicio6();
+        ejercicio8();
     }
     public static void ejercicio1(){
         /* 
@@ -139,5 +139,50 @@ public class Unidad2 {
         } else {
             System.out.println("La ecuación no tiene solución real.");
         }
+    }
+    public static void ejercicio7(){
+        /*
+         * Una empresa que gestiona un parque acuático te solicita una aplicación que les ayuda a
+         * calcular el importe que hay que cobrar en la taquilla por la compra de una serie de
+         * entradas (cuyo número será introducido por el usuario). Existen dos tipos de entrada:
+         * infantiles y adutlos. Las entradas infantiles tienen un precio de 15,50€. Las entradas
+         * de adultos cuestan 20€. En caso de que la compra total supere los 100€, se debe hacer un
+         * 5% de descuento, indicando expresamente que se le ha hecho un descuento por esta razón y
+         * mostrando cuál ha sido el importe del descuento.
+         */
+        Scanner input = new Scanner(System.in);
+        double precioInf = 15.50;
+        double precioAdu = 20;
+        System.out.println("Indicar número de entradas infantiles: ");
+        double entI = input.nextDouble();
+        System.out.println("Indicar número de entradas adultos: ");
+        double entA = input.nextDouble();
+        double compraTotal = entI*precioInf + entA*precioAdu;
+        if (compraTotal > 100){
+            System.out.println("La compra supera los 100 euros por lo que se le aplicará un 5% de descuento.");
+            double descuento = 0.05;
+            double importeDescuento = compraTotal*descuento;
+            System.out.println("El importe de descuento es de " + importeDescuento);
+            double precioFinal = compraTotal - importeDescuento;
+            System.out.println("El precio final es de " + precioFinal);
+        } else {
+            System.out.println("La compra total vale: " + compraTotal);
+        }
+    }
+    public static void ejercicio8(){
+        /*
+         * Escribir una aplicación que indique cuántas cifras tiene un número introducido por teclado.
+         * El número debe estar comprendido entre 0 y 99.999.
+         */
+        Scanner input = new Scanner(System.in);
+        System.out.println("Teclee un número entre 0 y 99.999: ");
+        int num = input.nextInt();
+        int x = num;
+        int cifras = 0;
+        do {
+            x = x/10;
+            cifras++;
+        } while (x != 0);
+        System.out.println("El numero " + num + " tiene " + cifras + " cifras.");
     }
 }
