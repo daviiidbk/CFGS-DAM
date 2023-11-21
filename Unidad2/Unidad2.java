@@ -185,4 +185,99 @@ public class Unidad2 {
         } while (x != 0);
         System.out.println("El numero " + num + " tiene " + cifras + " cifras.");
     }
+    public static void ejercicio9if(){
+        /*
+         * Elabora un programa qu solicite al usuario una nota de 0 a 10 y muestre:
+         * a. Insuficiente si la nota está entre 0 y 4
+         * b. Suficiente si la nota es 5
+         * c. Bien si la nota es 6
+         * d. Notable si la nota es 7 u 8
+         * e. Sobresaliente si la nota es 9 o 10
+         * Elabora el programa utilizando la sentencia if.
+         */
+        Scanner input = new Scanner(System.in);
+        System.out.println("Indicar nota: ");
+        int nota = input.nextInt();
+        if (nota < 5){
+            System.out.println("Insuficiente");
+        } else if (nota == 5){
+            System.out.println("Suficiente");
+        } else if (nota == 6){
+            System.out.println("Bien");
+        } else if (nota == 7 || nota == 8){
+            System.out.println("Notable");
+        } else {
+            System.out.println("Sobresaliente");
+        }
+    }
+    public static void ejercicio9IfDouble(){
+        /*
+         * Elabora un programa qu solicite al usuario una nota de 0 a 10 y muestre:
+         * a. Insuficiente si la nota está entre 0 y 4
+         * b. Suficiente si la nota es 5
+         * c. Bien si la nota es 6
+         * d. Notable si la nota es 7 u 8
+         * e. Sobresaliente si la nota es 9 o 10
+         * Elabora el programa utilizando la sentencia if. Esta solución se adapta a si
+         * las notas fueran doubles.
+         */
+        Scanner input = new Scanner(System.in);
+        System.out.println("Indicar nota: ");
+        double nota = input.nextDouble();
+        if (nota < 5){
+            System.out.println("Insuficiente");
+        } else if (nota < 6){
+            System.out.println("Suficiente");
+        } else if (nota < 7){
+            System.out.println("Bien");
+        } else if (nota < 9){
+            System.out.println("Notable");
+        } else {
+            System.out.println("Sobresaliente");
+        }
+    }
+    public static void ejercicio9switch(){
+        /*
+         * Elabora un programa qu solicite al usuario una nota de 0 a 10 y muestre:
+         * a. Insuficiente si la nota está entre 0 y 4
+         * b. Suficiente si la nota es 5
+         * c. Bien si la nota es 6
+         * d. Notable si la nota es 7 u 8
+         * e. Sobresaliente si la nota es 9 o 10
+         * Elabora el programa utilizando la sentencia switch.
+         */
+        Scanner input = new Scanner(System.in);
+        System.out.println("Indicar nota: ");
+        int nota = input.nextInt();
+        switch (nota) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                System.out.println("Insuficiente");
+                break;
+            case 5:
+                System.out.println("Suficiente");
+                break;
+            case 6:
+                System.out.println("Bien");
+                break;
+            case 7:
+            case 8:
+                System.out.println("Notable");
+                break;
+            case 9:
+            case 10:
+                System.out.println("Sobresaliente");
+                break;
+            default:
+                break;
+        }
+    }
+    public static void ejercicio10(){
+        /*
+         * 
+         */
+    }
 }
