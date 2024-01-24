@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Unidad3 {
     public static void main(String[] args){
-        ejercicio1();
+        ejercicio6();
     }
     public static void ejercicio1(){
         /* Elabora un programa que muestra por 
          * pantalla los 20 primeros números naturales.
          */
         int num = 0;
-        while(num <= 20){
+        while(num < 20){
             num++;
             System.out.println(num);
         }
@@ -35,23 +35,26 @@ public class Unidad3 {
          * número es multiplicar el número por todos los anteriores
          * hasta llegar al 1. Ejemplo: 5! 5·4·3·2·1 = 120.
          */
-        int num = 0;
+        int num, entrada = 0;
         int factorial = 1;
         System.out.println("Introduce un número: ");
         Scanner input = new Scanner(System.in);
         num = input.nextInt();
+        entrada = num;
         while(num >= 1){
             factorial = factorial * num;
             num--;
         }
-        System.out.println("El factorial de " + num + " es " + factorial);
+        System.out.println("El factorial de " + entrada + " es " + factorial);
     }
     public static void ejercicio4(){
         /* Realiza un programa que lea 10 números y luego indique
          * cuántos han sido positivos y cuántos negativos.
          */
-        for(int i = 0; i<=10; i++){
-            System.out.println("Introduzca un número: ")
+        int positivos = 0, negativos = 0;
+        Scanner input = new Scanner(System.in);
+        for(int i = 0; i<10; i++){
+            System.out.println("Introduzca un número: ");
             if(input.nextInt() > 0){
                 positivos++;
             }else {
@@ -99,6 +102,7 @@ public class Unidad3 {
             for(int j = 1; j <= i; j++){
                 System.out.print(i);
             }
+            System.out.println();
         }
         System.out.println();
     }
