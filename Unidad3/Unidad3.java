@@ -1,10 +1,11 @@
 package Unidad3;
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.lang.Math;
 
 public class Unidad3 {
     public static void main(String[] args){
-        ejercicio7();
+        ejercicio8();
     }
     public static void ejercicio1(){
         /* Elabora un programa que muestra por 
@@ -119,5 +120,41 @@ public class Unidad3 {
             suma += valor;
         }
         System.out.println("La suma total de los valores es el siguiente: " + suma);
+    }
+    public static void ejercicio8(){
+        /* Elabora un programa que pida diez números por teclado, los almacene en un array y
+        posteriormente indique cuál es el máximo y cuál es el mínimo. */
+        double valor = 0;
+        double[] array = new double[10];
+        for(int i = 0; i < 10; i++){
+            System.out.println("Introduzca un valor: ");
+            Scanner input = new Scanner(System.in);
+            valor = input.nextDouble();
+            array[i] = valor;
+        }
+        double minimo = array[0];
+        double maximo = array[0];
+        for(int i = 1; i < array.length; i++){
+            if(array[i] < minimo) minimo = array[i];
+            if(array[i] > maximo) maximo = array[i];
+        }
+        System.out.println("El valor mínimo del array es: " + minimo);
+        System.out.println("El valor máximo del array es: " + maximo);
+    }
+    public static void ejercicio9(){
+        /* Crea un programa que cree dos arrays de enteros de tamaño 20. El primer array
+         * se rellenará con valores aleatorios. El segundo array se creará escribiendo el
+         * primer array en orden inverso. Finalmente, mostrar ambos arrays por pantalla
+        */
+        int[] randomArray = new int[20];
+        int[] inversoArray = new int[20];
+        for (int i = 0; i < randomArray.length; i++) {
+            randomArray[i] = (int) Math.random();
+        }
+        int contador = 20;
+        while 
+        for (int i = 0; i < randomArray.length; i++){
+            System.out.println(randomArray[i]);
+        }
     }
 }
