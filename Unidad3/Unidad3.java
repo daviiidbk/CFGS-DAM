@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Unidad3 {
     public static void main(String[] args){
-        ejercicio6();
+        ejercicio7();
     }
     public static void ejercicio1(){
         /* Elabora un programa que muestra por 
@@ -105,5 +105,19 @@ public class Unidad3 {
             System.out.println();
         }
         System.out.println();
+    }
+    public static void ejercicio7(){
+        /*Elabora un programa que pida diez números reales por teclado, los almacene
+        en un array, y luego muestra la suma de todos los valores. */
+        double valor = 0;
+        double suma = 0;
+        double[] array = new double[10];
+        for( int i = 0; i < 10; i++){
+            System.out.println("Introduzca un valor: ");
+            Scanner input = new Scanner(System.in);
+            valor = input.nextDouble();
+            suma += valor;
+        }
+        System.out.println("La suma total de los valores es el siguiente: " + suma);
     }
 }
