@@ -2,10 +2,11 @@ package Unidad3;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
+import java.lang.Math;
 
 public class Unidad3 {
     public static void main(String[] args){
-        ejercicio9();
+        ejercicio10();
     }
     public static void ejercicio1(){
         /* Elabora un programa que muestra por 
@@ -157,5 +158,32 @@ public class Unidad3 {
         }
         System.out.println("Primer array: " + Arrays.toString(randomArray));
         System.out.println("Segundo array: " + Arrays.toString(inversoArray));
+    }
+    public static void ejercicio10(){
+        /* Crea un programa que genere un array de tamaño 1000 rellenado con números aleatorios
+         * entre el 1 y el 100 (Math.random() * 100 + 1). Luego, pedirá al usuario que introduzca
+         * por teclado un valor N y mostrará por pantalla si ese valor está en el array y cuántas
+         * veces se repite.
+         */
+        int[] randomArray = new int[1000];
+        int valor = 0;
+        for (int i = 0; i < randomArray.length; i++){
+            valor = (int) (Math.random() * 100 + 1);
+            randomArray[i] = valor;
+        }
+        System.out.println("Introduzca el valor a buscar: ");
+        Scanner input = new Scanner(System.in);
+        int busqueda = input.nextInt();
+        int contador = 0;
+        for (int i = 0; i < randomArray.length; i++){
+            if (randomArray[i] == busqueda){
+                contador++;
+            }
+        }
+        if (contador > 0){
+            System.out.println("El número " + busqueda + " aparece " + contador + " veces.");
+        } else {
+            System.out.println("El número " + busqueda + " no aparece en el array.");
+        }
     }
 }
