@@ -1,11 +1,11 @@
 package Unidad3;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.lang.Math;
+import java.util.Random;
 
 public class Unidad3 {
     public static void main(String[] args){
-        ejercicio8();
+        ejercicio9();
     }
     public static void ejercicio1(){
         /* Elabora un programa que muestra por 
@@ -148,13 +148,14 @@ public class Unidad3 {
         */
         int[] randomArray = new int[20];
         int[] inversoArray = new int[20];
+        Random valor = new Random();
         for (int i = 0; i < randomArray.length; i++) {
-            randomArray[i] = (int) Math.random();
+            randomArray[i] = valor.nextInt(20);
         }
-        int contador = 20;
-        while 
-        for (int i = 0; i < randomArray.length; i++){
-            System.out.println(randomArray[i]);
+        for (int i = 0; i < randomArray.length; i++) {
+            inversoArray[i] = randomArray[randomArray.length - 1 - i];
         }
+        System.out.println("Primer array: " + Arrays.toString(randomArray));
+        System.out.println("Segundo array: " + Arrays.toString(inversoArray));
     }
 }
