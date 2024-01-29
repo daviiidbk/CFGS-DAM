@@ -1,20 +1,16 @@
 package Actividades.Actividad10;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Biblioteca {
 
     static Scanner s = new Scanner(System.in);
     static int menu = -1;
-    static ArrayList libros = new ArrayList();
 
     public static void main(String[] args) {
         // Pruebas de funcionamiento de creación y métodos de préstamos y devoluciones.
         Libro libro1 = new Libro("El Quijote de la Mancha", "Miguel de Cervantes", 2, 0);
         Libro libro2 = new Libro("El Capitán Alatriste", "Arturo Pérez Reverte", 1, 0);
-        libros.add(libro1);
-        libros.add(libro2);
         System.out.println(libro1.toString());
         System.out.println(libro2.toString());
         libro1.prestamo();
