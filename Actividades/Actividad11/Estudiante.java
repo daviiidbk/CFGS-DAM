@@ -1,32 +1,35 @@
 package Actividades.Actividad11;
 
-public class Estudiante extends Persona{
+public class Estudiante extends Persona {
     private String codigo;
 
-    public Estudiante(){
+    // Constructor sin parámetros
+    public Estudiante() {
     }
 
-    Estudiante(Estudiante nombre, Estudiante direccion, String codigo){
+    // Constructor con parámetros
+    public Estudiante(String nombre, String direccion, int edad, String codigo) {
+        super(nombre, direccion, edad);
         this.codigo = codigo;
     }
 
-    public Estudiante(String string, String string2, String string3) {
-        //TODO Auto-generated constructor stub
-    }
-
-    public String getCodigo(){
+    // Métodos getter y setter para el código
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo){
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
     @Override
+    // Método toString que incluye la información de la persona y el código del estudiante
     public String toString() {
-        return "{" +
-            " codigo='" + getCodigo() + "'" +
-            "}";
+        return "Estudiante{" +
+                "nombre='" + nombre + "" +
+                ", direccion='" + direccion + "" +
+                ", edad=" + edad +
+                ", codigo='" + codigo + "" +
+                '}';
     }
-
 }

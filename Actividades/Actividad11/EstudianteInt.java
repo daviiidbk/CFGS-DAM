@@ -4,11 +4,11 @@ public class EstudianteInt extends Estudiante{
     private boolean esErasmus;
     private String nacionalidad;
 
-    public EstudianteInt(String string, String string2, String string3, boolean b, String string4){
+    public EstudianteInt(){
     }
 
-    public EstudianteInt(Estudiante nombre, Estudiante direccion, Estudiante codigo,
-    boolean esErasmus, String nacionalidad){
+    public EstudianteInt(String nombre, String direccion, int edad, String codigo, boolean esErasmus, String nacionalidad){
+        super(nombre, direccion, edad, codigo);
         this.esErasmus = esErasmus;
         this.nacionalidad = nacionalidad;
     }
@@ -31,8 +31,10 @@ public class EstudianteInt extends Estudiante{
 
     public boolean esEuropeo(){
         if(this.nacionalidad == "americano"){
+            System.out.println( getNombre() + " no es europeo.");
             return false;
-        } else return true;
+        } else System.out.println( getNombre() + " es europeo.");
+        return true;
     }
     public boolean esErasmus(){
         if(this.nacionalidad == "americano") return false;
@@ -41,9 +43,14 @@ public class EstudianteInt extends Estudiante{
 
     public boolean descuentoParaJovenes(){
         if (esErasmus() == false){
+            System.out.println( getNombre() + " no tiene acceso al descuento.");
             return false;
         } else if (this.edad >= 25){
+            System.out.println( getNombre() + " no tiene acceso al descuento.");
             return false;
-        } else return true;
+        } else {
+            System.out.println( getNombre() + " tiene acceso al descuento.");
+            return true;
+        }
     }
 }

@@ -3,7 +3,7 @@ package Actividades.Actividad11;
 public class Persona {
     protected String nombre;
     protected String direccion;
-    protected int edad;
+    protected static int edad;
 
     public Persona(){
     }
