@@ -1,4 +1,4 @@
-package Actividades;
+package Actividades.Actividad10;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Objects;

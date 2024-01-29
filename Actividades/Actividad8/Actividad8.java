@@ -1,4 +1,4 @@
-package Actividades;
+package Actividades.Actividad8;
 
 import java.lang.Math;
 import java.util.Arrays;
