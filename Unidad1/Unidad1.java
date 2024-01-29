@@ -10,7 +10,7 @@ public static void ejercicio1(){
     int A = 5, B = 2, C = 3;
     System.out.println("Principio de Ejercicio 1.");
     A = B;
-    System.out.println("#1 " + "A ="+ A + " B =" + B + " C =" + C);
+    System.out.println("#1 " + "A ="+ A + " B =" + B + " C =" + C); 
     C = A;
     System.out.println("#2 " + "A ="+ A + " B =" + B + " C =" + C);
     B = (A + B + C) / 2;
